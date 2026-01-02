@@ -6,7 +6,7 @@ A high-performance, responsive portfolio showcasing the intersection of **Fronte
 
 ## ✨ Key Projects
 
-### 🧠 StudyLens AI
+### 🧠 NexoraAI
 * **Description**: A smart learning assistant that solves academic problems via image recognition.
 * **Tech Stack**: React, Vision-Language APIs, CSS Mesh Gradients.
 * **Innovation**: Integrated OCR to transform raw images into step-by-step pedagogical solutions in under 3 seconds.
