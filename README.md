@@ -53,6 +53,9 @@ To run this project locally:
 
 📩 Contact & Socials
 Email: kamatmihir03@gmail.com
+
 Phone: +91 7021296177
+
 LinkedIn: https://www.linkedin.com/in/mihirkamat/
+
 Portfolio: https://mihirkamat03.github.io/portfolio/
