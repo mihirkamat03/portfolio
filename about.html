@@ -1,60 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About me</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <title>About | Mihir K.</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600&family=Varela+Round&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
     <div class="top-bar">
-        <h1 class="top">Mihir K.</h1>
+        <a href="index.html" class="top">Mihir K.</a>
         <nav>
             <ul>
-                <a href="index.html">Home</a></li>
-                <a href="about.html">About</a></li>
-                <a href="my projects.html">Projects</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="my projects.html">Projects</a></li>
             </ul>
         </nav>
-        <a href="contact.html" class="contact"><img src="https://cdn-icons-png.flaticon.com/512/10439/10439809.png"
-                width="50"></a>
+        <a href="contact.html"><img src="https://cdn-icons-png.flaticon.com/512/10439/10439809.png" width="40"></a>
     </div>
-    <h1 style="height: 100px; margin-left: 50px; font-size: 58px; font-family: 'Varela Round', sans-serif; color: #000;">About me:</h1>
 
-    <h2 style="font-size: 32px; margin-left: 20px;">1. So, who am I?</h2>
-    <h2 style="margin-left: 40px;">Hey! I’m Mihir Kamat — a self-taught web developer and a tech enthusiast who loves
-        turning random ideas into neat, functional websites. Right now, I’m deep into front-end stuff like HTML, CSS,
-        and I’m slowly cracking JavaScript and Python too (Python still gives me mood swings sometimes 😆).</h2>
-    <br>
-    <h2 style="font-size: 32px; margin-left: 20px;">2. My love/ skills</h2>
-    <h2 style="margin-left: 40px;">I enjoy creating clean designs that actually work well on any screen. I like
-        experimenting with layouts, animations, and making things look simple yet catchy. Recently, I’ve been building
-        small personal projects — from landing pages to fun mini apps — just to push my skills a bit every day.</h2>
-    <br>
-    <h2 style="font-size: 32px; margin-left: 20px;">3. Me, about goals</h2>
-    <h2 style="margin-left: 40px;">I’m the kind of person who learns best by doing — break it, fix it, break it again,
-        fix it better. That’s my style. I believe tech is best learned hands-on, and I’m not scared of hitting errors
-        (though they do test my patience at 2 AM).</h2>
+    <h1 class="page-title">About Me</h1>
 
-    <h2 style="font-size: 32px; margin-left: 20px;">4. Wrap up with call and action</h2>
-    <h2 style="margin-left: 40px;">Apart from coding, I’m a huge fan of sketching random ideas, watching tech YouTubers
-        who make me feel both inspired and unproductive at the same time 😂, and I love music — anything that keeps me
-        in the zone.
-        <br><br>In the next few years, I want to become a full-stack developer and work on real-world projects that
-        solve real problems. I’m open to collabs, internships, freelance gigs — anything that helps me learn, grow, and
-        build cool stuff with cool people.
-        <br><br>If you’ve got an idea or just want to say hi, check out my projects and drop me a message. Let’s create
-        something awesome together.
-    </h2><br>
-    <a href="contact.html"><button style="margin-left: 40px;" class="talk">Contact Me</button></a>
-<br><br><br>
-<p style="margin-left: 40%;">© Copyright 2025: Mihir Kamat Portfolio</p>
+    <div class="container about-section">
+        <div class="card">
+            <h2>01. Who am I?</h2>
+            <p>Hey! I’m Mihir Kamat — a self-taught web developer and tech enthusiast. I turn ideas into neat, functional websites. I'm currently mastering Frontend development while navigating the "mood swings" of Python! 😆</p>
+        </div>
+        
+        <div class="card" style="background: var(--accent); color: white;">
+            <h2 style="color: white;">02. My Skillset</h2>
+            <p>I enjoy creating clean designs that work on any screen. I'm obsessed with layouts, smooth animations, and simplicity. Recently, I've been building landing pages and mini-apps to push my limits every single day.</p>
+        </div>
 
+        <div class="card">
+            <h2>03. My Philosophy</h2>
+            <p>I learn best by doing: break it, fix it, break it again, fix it better. Tech is a hands-on journey, and I’m not afraid of 2 AM error messages—they're just puzzles waiting to be solved.</p>
+        </div>
+
+        <div class="card" style="grid-column: span 1;">
+            <h2>04. Beyond the Code</h2>
+            <p>When I'm not coding, I'm sketching ideas, watching tech YouTube for inspiration, or listening to music to stay in the zone. I’m aiming to become a Full-Stack developer and build real-world solutions.</p>
+            <br>
+            <a href="contact.html" style="text-decoration:none;"><button class="btn-submit" style="width: auto;">Work with me</button></a>
+        </div>
+    </div>
 </body>
-
 </html>
