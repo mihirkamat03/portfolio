@@ -1,7 +1,5 @@
 # 🚀 Mihir Kamat | Portfolio 2026
 
-![Portfolio Preview](https://via.placeholder.com/800x400?text=Modern+Bento+Grid+Portfolio+Preview)
-
 A high-performance, responsive portfolio showcasing the intersection of **Frontend Development**, **UI/UX Design**, and **AI Integration**. This site is built with a focus on modern design trends like **Bento Grids**, **Glassmorphism**, and **Interactive Micro-animations**.
 
 ---
