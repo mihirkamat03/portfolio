@@ -6,6 +6,11 @@ A high-performance, responsive portfolio showcasing the intersection of **Fronte
 
 ## ✨ Key Projects
 
+### 🍔 QuickBite
+* **Description**: A high-performance digital cafeteria ecosystem that eliminates campus congestion by integrating secure student verification with real-time queue orchestration and zero-latency order tracking.
+* **Tech Stack**: HTML5 • CSS3 (Glassmorphism) • Vanilla JavaScript (ES6+) • Firebase Realtime Database • Firebase Authentication • LocalStorage API
+* **Innovation**: Engineered a hybrid state management system merging LocalStorage with Firebase to ensure zero-latency cart interactions and seamless cross-device persistence.
+
 ### 🧠 NexoraAI
 * **Description**: A smart learning assistant that solves academic problems via image recognition.
 * **Tech Stack**: React, Vision-Language APIs, CSS Mesh Gradients.
@@ -50,7 +55,8 @@ To run this project locally:
    git clone https://github.com/mihirkamat03/portfolio.git
 
 📩 Contact & Socials
-Email: kamatmihir03@gmail.com
+
+Email: kamatmihir.cse@gmail.com
 
 Phone: +91 7021296177
 
