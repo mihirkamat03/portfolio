@@ -2,6 +2,8 @@
 
 A high-performance, responsive portfolio showcasing the intersection of **Frontend Development**, **UI/UX Design**, and **AI Integration**. This site is built with a focus on modern design trends like **Bento Grids**, **Glassmorphism**, and **Interactive Micro-animations**.
 
+<img src="preview/ss1.PNG" alt="Project Screenshots" width="400"> <img src="preview/ss2.PNG" alt="Project Screenshots" width="400">
+
 ---
 
 ## ✨ Key Projects
