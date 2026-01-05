@@ -48,14 +48,6 @@ This portfolio follows a strict 2026 design language:
 
 ---
 
-## 🚀 Getting Started
-
-To run this project locally:
-
-1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/mihirkamat03/portfolio.git
-
 📩 Contact & Socials
 
 Email: kamatmihir.cse@gmail.com
