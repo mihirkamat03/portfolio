@@ -1,78 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About | Mihir K.</title>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600&family=Varela+Round&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600&family=Varela+Round&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+    <div class="blob"></div>
+
     <div class="top-bar">
         <a href="index.html" class="top">Mihir K.</a>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
+                <li><a href="about.html" style="color: #fff;">About</a></li>
                 <li><a href="my projects.html">Projects</a></li>
             </ul>
         </nav>
-        <a href="contact.html"><img src="https://cdn-icons-png.flaticon.com/512/10439/10439809.png" width="40"></a>
+        <a href="contact.html" class="btn-primary" style="padding: 10px 20px;">Contact</a>
     </div>
 
     <h1 class="page-title">About Me</h1>
 
-    <div class="container about-section">
+    <div class="container about-section reveal">
         <div class="card">
             <h2>01. Who am I?</h2>
-            <p>Hey! I’m Mihir Kamat — a self-taught web developer and tech enthusiast. I turn ideas into neat,
-                functional websites. I'm currently mastering Frontend development while navigating the "mood swings" of
-                Python! 😆</p>
+            <p>Hey! I’m Mihir Kamat — a self-taught web developer and tech enthusiast. I turn ideas into neat, functional websites. I'm currently mastering Frontend development while navigating the "mood swings" of Python! 😆</p>
         </div>
 
-        <div class="card" style="background: var(--accent); color: white;">
-            <h2 style="color: white;">02. My Skillset</h2>
-            <p>I enjoy creating clean designs that work on any screen. I'm obsessed with layouts, smooth animations, and
-                simplicity. Recently, I've been building landing pages and mini-apps to push my limits every single day.
-            </p>
+        <div class="card">
+            <h2>02. My Skillset</h2>
+            <p>I enjoy creating clean designs that work on any screen. I'm obsessed with layouts, smooth animations, and simplicity. Recently, I've been building robust logic systems like QuickBite and AI tools like NexoraAI to push my limits.</p>
         </div>
 
         <div class="card">
             <h2>03. My Philosophy</h2>
-            <p>I learn best by doing: break it, fix it, break it again, fix it better. Tech is a hands-on journey, and
-                I’m not afraid of 2 AM error messages—they're just puzzles waiting to be solved.</p>
+            <p>I learn best by doing: break it, fix it, break it again, fix it better. Tech is a hands-on journey, and I’m not afraid of 2 AM error messages—they're just puzzles waiting to be solved.</p>
         </div>
 
-        <div class="card" style="grid-column: span 1;">
+        <div class="card">
             <h2>04. Beyond the Code</h2>
-            <p>When I'm not coding, I'm sketching ideas, watching tech YouTube for inspiration, or listening to music to
-                stay in the zone. I’m aiming to become a Full-Stack developer and build real-world solutions.</p>
+            <p>When I'm not coding, I'm sketching ideas, watching tech YouTube for inspiration, or listening to music to stay in the zone. I’m aiming to become a Full-Stack developer and build real-world solutions.</p>
             <br>
-            <a href="contact.html" style="text-decoration:none;"><button class="btn-submit" style="width: auto;">Work
-                    with me</button></a>
+            <a href="contact.html" class="btn-primary">Work with me</a>
         </div>
     </div>
+    
     <footer class="footer">
-        <p>Connect with me</p>
-        <div class="social-links">
-            <a href="https://github.com/mihirkamat03" target="_blank" class="social-icon github">
-                <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub">
-            </a>
-
-            <a href="https://instagram.com/mihirkamat_07" target="_blank" class="social-icon insta">
-                <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram">
-            </a>
-
-            <a href="https://linkedin.com/in/mihirkamat" target="_blank" class="social-icon linkedin">
-                <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
-            </a>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+            <p>Connect with me</p>
+            <div class="social-links">
+                <a href="https://github.com/mihirkamat03" target="_blank" class="social-icon github">
+                    <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub">
+                </a>
+                <a href="https://instagram.com/mihirkamat_07" target="_blank" class="social-icon insta">
+                    <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram">
+                </a>
+                <a href="https://linkedin.com/in/mihirkamat" target="_blank" class="social-icon linkedin">
+                    <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
+                </a>
+            </div>
         </div>
     </footer>
+    
+    <script>
+        setTimeout(() => { document.querySelector('.reveal').classList.add('active'); }, 100);
+    </script>
 </body>
-<script src="script.js"></script>
-
 </html>

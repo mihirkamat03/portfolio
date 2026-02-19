@@ -8,62 +8,102 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="blob"></div>
+
     <div class="top-bar">
         <a href="index.html" class="top">Mihir K.</a>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="my projects.html">Projects</a></li>
+                <li><a href="my projects.html" style="color: #fff;">Projects</a></li>
             </ul>
         </nav>
-        <a href="contact.html"><img src="https://cdn-icons-png.flaticon.com/512/10439/10439809.png" width="40"></a>
+        <a href="contact.html" class="btn-primary" style="padding: 10px 20px;">Contact</a>
     </div>
 
     <h1 class="page-title">Selected Work</h1>
 
-    <div class="container">
+    <div class="container reveal">
         <div class="bento-grid">
-            <div class="card" style="grid-column: span 2; background: #000; color: #fff;">
-                <span style="color: var(--accent); font-weight: bold;">01. Featured Project</span>
-                <h2 style="font-family: 'Varela Round'; margin: 10px 0;">QuickBite</h2>
-                <p style="color: #ccc;">A high-availability smart cafeteria ecosystem designed to eliminate campus congestion through real-time queue orchestration and a persistent, state-managed cart architecture.</p>
-                <div style="display: flex;">
-                    <div style="margin-right: 20px; margin-top: 20px; font-size: 14px;">HTML • CSS • JS</div>
-                    <a href="https://mihirkamat03.github.io/Quick-Bite/" style="color: var(--accent); text-decoration: none; font-weight: bold; display: block; margin-top: 15px;">View Live →</a>
-                </div>
-            </div>
-
-            <div class="card">
-                <h2 style="font-family: 'Varela Round';">IndoLearn</h2>
-                <p>An educational dashboard concept featuring clean bento-box layouts and progress tracking.</p>
-                <a href="#" style="color: var(--accent); text-decoration: none; font-weight: bold; display: block; margin-top: 15px;">View Live →</a>
+            
+            <div class="card" style="grid-column: span 3; position: relative; overflow: hidden;">
+    <div style="position: absolute; top: -50px; right: -50px; width: 150px; height: 150px; background: var(--accent); filter: blur(80px); opacity: 0.5; z-index: 0;"></div>
+    
+    <div style="position: relative; z-index: 1;">
+        <span class="badge" style="color: var(--accent); font-weight: bold; font-size: 14px; margin-bottom: 10px; display: inline-block;">🚀 NEW RELEASE</span>
+        
+        <h2 style="margin: 10px 0; font-size: 36px; text-shadow: 0 0 15px var(--accent-glow);">Lumina Path</h2>
+        
+        <p style="font-size: 16px; max-width: 90%;">
+            An intelligent, high-performance routing and visualization engine. <strong>Lumina Path</strong> leverages optimized algorithms to calculate and display the most efficient navigational vectors in real-time. Built with a focus on seamless user experience.
+        </p>
+        
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 25px;">
+            <div style="display: flex; gap: 10px;">
+                <span style="font-size: 12px; color: #fff; background: rgba(168, 85, 247, 0.2); border: 1px solid var(--accent); padding: 5px 12px; border-radius: 20px;">React / JS</span>
+                <span style="font-size: 12px; color: #fff; background: rgba(168, 85, 247, 0.2); border: 1px solid var(--accent); padding: 5px 12px; border-radius: 20px;">Algorithms</span>
+                <span style="font-size: 12px; color: #fff; background: rgba(168, 85, 247, 0.2); border: 1px solid var(--accent); padding: 5px 12px; border-radius: 20px;">Data Visualization</span>
             </div>
             
-            <div class="card" style="grid-column: span 3; background: #19011a; color: #fff;">
-                <span style="color: var(--accent); font-weight: bold;">02. Featured Project</span>
-                <h2 style="font-family: 'Varela Round'; margin: 10px 0;">Nexora AI</h2>
-                <p style="color: #ccc;">A high-performance student portal designed to simplify academic management through a modular Bento-box architecture and real-time data visualization</p>
-                <div style="display: flex;">
-                    <div style="margin-right: 20px; margin-top: 20px; font-size: 14px;">HTML • CSS • JS</div>
-                    <a href="https://mihirkamat03.github.io/NexoraAI/" style="color: var(--accent); text-decoration: none; font-weight: bold; display: block; margin-top: 15px;">View Live →</a>
-                </div>
+            <div style="display: flex; gap: 15px;">
+                <a href="https://github.com/mihirkamat03/LuminaPath" target="_blank" style="color: var(--sub-text); text-decoration: none; font-weight: bold; font-size: 14px; transition: 0.3s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='var(--sub-text)'">GitHub ↗</a>
+                <a href="https://mihirkamat03.github.io/LuminaPath" target="_blank" style="color: var(--accent); text-decoration: none; font-weight: bold; font-size: 14px; text-shadow: 0 0 8px var(--accent-glow);">View Live ↗</a>
             </div>
-
-            <div class="card">
-                <h2 style="font-family: 'Varela Round';">Portfolio 2025</h2>
-                <p>The very site you are looking at—built for speed and modern aesthetics.</p>
-                <a href="#" style="color: var(--accent); text-decoration: none; font-weight: bold; display: block; margin-top: 15px;">GitHub Repo →</a>
-            </div>
-
-            <div class="card" style="grid-column: span 2; background: #0F172A; color: #fff;">
-                <h2 style="font-family: 'Varela Round'; margin: 10px 0;">IndoBooks App</h2>
-                <p style="color: #ccc;">A comprehensive reading platform designed with a focus on UI/UX and seamless navigation.</p>
-                <div style="margin-top: 20px; font-size: 14px;">HTML • CSS • JS</div>
-            </div>
-
-            
         </div>
     </div>
+</div>
+
+            <div class="card" style="grid-column: span 2;">
+                <span style="color: var(--accent); font-weight: bold; font-size: 14px;">01. Featured Project</span>
+                <h2 style="margin: 10px 0;">QuickBite</h2>
+                <p>A high-availability smart cafeteria ecosystem designed to eliminate campus congestion through real-time queue orchestration and a persistent, state-managed cart architecture.</p>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px;">
+                    <div style="font-size: 12px; color: var(--sub-text); border: 1px solid var(--border); padding: 5px 10px; border-radius: 20px;">HTML • CSS • JS • Firebase</div>
+                    <a href="https://mihirkamat03.github.io/Quick-Bite/" target="_blank" style="color: var(--accent); text-decoration: none; font-weight: bold;">View Live →</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <span style="color: var(--accent); font-weight: bold; font-size: 14px;">UI/UX</span>
+                <h2 style="margin: 10px 0;">IndoLearn</h2>
+                <p>An educational dashboard concept featuring clean bento-box layouts and progress tracking.</p>
+                <a href="#" style="color: var(--accent); text-decoration: none; font-weight: bold; display: block; margin-top: 20px;">View Live →</a>
+            </div>
+            
+            <div class="card" style="grid-column: span 3;">
+                <span style="color: var(--accent); font-weight: bold; font-size: 14px;">02. AI Integration</span>
+                <h2 style="margin: 10px 0;">Nexora AI</h2>
+                <p>A smart learning assistant that solves academic problems via image recognition. Integrated with advanced Vision-Language APIs to transform raw images into step-by-step pedagogical solutions in under 3 seconds.</p>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px;">
+                    <div style="font-size: 12px; color: var(--sub-text); border: 1px solid var(--border); padding: 5px 10px; border-radius: 20px;">React • Vision API • Modern CSS</div>
+                    <a href="https://mihirkamat03.github.io/NexoraAI/" target="_blank" style="color: var(--accent); text-decoration: none; font-weight: bold;">View Live →</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <span style="color: var(--accent); font-weight: bold; font-size: 14px;">Development</span>
+                <h2 style="margin: 10px 0;">Portfolio 2026</h2>
+                <p>The very site you are looking at—built for speed, featuring glassmorphism and modern CSS Grid architecture.</p>
+                <a href="https://github.com/mihirkamat03/portfolio" target="_blank" style="color: var(--accent); text-decoration: none; font-weight: bold; display: block; margin-top: 20px;">GitHub Repo →</a>
+            </div>
+
+            <div class="card" style="grid-column: span 2;">
+                <span style="color: var(--accent); font-weight: bold; font-size: 14px;">Mobile App</span>
+                <h2 style="margin: 10px 0;">IndoBooks App</h2>
+                <p>A comprehensive reading platform designed with a focus on UI/UX, deep space aesthetics, and seamless navigation.</p>
+                <div style="margin-top: 20px; font-size: 12px; color: var(--sub-text); border: 1px solid var(--border); padding: 5px 10px; border-radius: 20px; display: inline-block;">HTML • CSS • JS</div>
+            </div>
+
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <p>© 2026 Mihir Kamat. Built with precision.</p>
+    </footer>
+    
+    <script>
+        setTimeout(() => { document.querySelector('.reveal').classList.add('active'); }, 100);
+    </script>
 </body>
 </html>

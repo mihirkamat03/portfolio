@@ -1,19 +1,13 @@
-::-webkit-scrollbar {
-  display: none;
-}
-
+/* --- VARIABLES & BASE THEME --- */
 :root {
-  --glass: rgba(255, 255, 255, 0.7);
-  --border: rgba(255, 255, 255, 0.3);
-  --accent: #9c07f9;
-  --bg: #f0f2f5;
-  --text: #1d1d1f;
-  /* Light Mode Colors */
-  --bg-color: #f8f9fa;
-  --card-bg: #ffffff;
-  --text-color: #1d1d1f;
-  --accent-color: #9c07f9;
-  --border-color: rgba(0, 0, 0, 0.1);
+  --bg-color: #07030f;
+  --card-bg: rgba(20, 10, 35, 0.4);
+  --text-color: #ffffff;
+  --sub-text: #a89bbd;
+  --accent: #a855f7;
+  --accent-glow: rgba(168, 85, 247, 0.4);
+  --border: rgba(168, 85, 247, 0.2);
+  --glass: rgba(7, 3, 15, 0.7);
 }
 
 * {
@@ -22,15 +16,48 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  line-height: 1.6;
-  overflow-x: hidden;
+::-webkit-scrollbar {
+  display: none;
 }
 
-/* Shared Navigation */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: "Plus Jakarta Sans", sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+  background-image: radial-gradient(
+    circle at 50% -20%,
+    rgba(109, 40, 217, 0.15),
+    transparent 50%
+  );
+}
+
+/* --- MOVING BACKGROUND BLOB --- */
+.blob {
+  position: fixed;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(
+    circle,
+    rgba(192, 38, 211, 0.15) 0%,
+    transparent 70%
+  );
+  z-index: -1;
+  filter: blur(80px);
+  animation: move 20s infinite alternate;
+}
+
+@keyframes move {
+  from {
+    transform: translate(-10%, -10%);
+  }
+  to {
+    transform: translate(20%, 20%);
+  }
+}
+
+/* --- NAVIGATION --- */
 .top-bar {
   position: sticky;
   top: 20px;
@@ -39,19 +66,23 @@ body {
   justify-content: space-between;
   align-items: center;
   margin: 0 5% 40px;
-  padding: 15px 30px;
+  padding: 10px 30px;
   background: var(--glass);
   backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
   border: 1px solid var(--border);
   border-radius: 20px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
 }
 
 .top {
-  font-family: 'Varela Round';
+  font-family: "Varela Round", sans-serif;
   font-size: 22px;
-  color: #000;
+  background: linear-gradient(to right, #fff,#7806db);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   text-decoration: none;
+  font-weight: bold;
 }
 
 nav ul {
@@ -62,28 +93,34 @@ nav ul {
 
 nav a {
   text-decoration: none;
-  color: #555;
+  color: var(--sub-text);
   font-weight: 600;
   transition: 0.3s;
 }
 
 nav a:hover {
-  color: var(--accent);
+  color: #fff;
+  text-shadow: 0 0 8px var(--accent-glow);
 }
 
-/* Page Headers */
+/* --- HEADERS --- */
 .page-title {
-  font-family: 'Varela Round', sans-serif;
+  font-family: "Varela Round", sans-serif;
   font-size: clamp(32px, 5vw, 58px);
   margin: 40px 5%;
-  background: linear-gradient(to right, #000, var(--accent));
+  background: linear-gradient(to right, #fff, var(--accent));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-/* Bento Grid System */
-.container {
+/* --- BENTO GRID & GLOWING CARDS --- */
+.container,
+.working-section {
   padding: 0 5% 80px;
+}
+
+.working-section {
+  padding-top: 40px;
 }
 
 .bento-grid {
@@ -92,214 +129,345 @@ nav a:hover {
   gap: 20px;
 }
 
-.card {
-  background: #fff;
+.card,
+.bento-item {
+  background: var(--card-bg);
   padding: 30px;
   border-radius: 24px;
-  border: 1.5px solid #d6d4d4;
-  transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow:
+    inset 0 0 20px rgba(168, 85, 247, 0.05),
+    0 8px 32px rgba(0, 0, 0, 0.5);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  color: var(--text-color);
 }
 
-.card:hover {
+.card:hover,
+.bento-item:hover {
   transform: translateY(-5px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
   border-color: var(--accent);
+  box-shadow:
+    inset 0 0 20px rgba(168, 85, 247, 0.1),
+    0 0 30px var(--accent-glow);
 }
 
-/* About Specifics */
-.about-section {
+.card p,
+.bento-item p {
+  color: var(--sub-text);
+  margin-top: 10px;
+}
+.card h2,
+.bento-item h3 {
+  color: #fff;
+  font-family: "Varela Round", sans-serif;
+}
+
+/* --- PILL BUTTONS --- */
+.btn-primary,
+.btn-submit,
+.projects,
+.btn-secondary {
+  background: linear-gradient(135deg, #7e22ce 0%, #c026d3 100%);
+  color: #fff;
+  padding: 12px 30px;
+  border-radius: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 15px var(--accent-glow);
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-secondary {
+  background: transparent;
+  border: 1px solid var(--accent);
+  box-shadow: none;
+}
+
+.btn-primary:hover,
+.btn-submit:hover,
+.projects:hover,
+.btn-secondary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px var(--accent-glow);
+  border-color: #fff;
+}
+
+/* --- HERO SECTION --- */
+.intro {
+  height: 85vh;
   display: flex;
-  flex-direction: column;
-  gap: 20px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5%;
 }
 
-.about-card h2 {
+.hero-text h1 {
+  font-size: 64px;
+  font-family: "Varela Round", sans-serif;
+  line-height: 1.1;
+  margin-bottom: 10px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 5px 15px;
+  background: rgba(168, 85, 247, 0.1);
   color: var(--accent);
-  margin-bottom: 15px;
-  font-family: 'Varela Round';
+  border: 1px solid var(--border);
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 20px;
 }
 
-/* Contact Specifics */
+.btn-group {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.hero-img {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 600px;
+  height: 600px;
+}
+
+.pic-main {
+  position: relative;
+  z-index: 10;
+  width: 500px;
+  height: auto;
+  filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.5));
+  transition: transform 0.5s ease;
+}
+
+.pic-main:hover {
+  transform: scale(1.02);
+}
+
+/* --- FORMS --- */
 .contact-wrapper {
   display: grid;
   grid-template-columns: 1fr 1.5fr;
   gap: 40px;
 }
-
-.info-box p {
-  font-size: 18px;
-  margin-bottom: 10px;
-  color: #444;
-}
-
 .form-card {
-  background: #fff;
+  background: var(--card-bg);
   padding: 40px;
   border-radius: 30px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(16px);
 }
-
 .form-group {
   margin-bottom: 20px;
 }
-
 label {
   display: block;
   margin-bottom: 8px;
   font-weight: 600;
+  color: #fff;
 }
-
 input,
 textarea {
   width: 100%;
   padding: 12px 20px;
   border-radius: 12px;
-  border: 1.5px solid #eee;
-  background: #f9f9fb;
+  border: 1px solid var(--border);
+  background: rgba(0, 0, 0, 0.3);
+  color: #fff;
   font-size: 16px;
+  font-family: "Plus Jakarta Sans", sans-serif;
   transition: 0.3s;
 }
-
 input:focus,
 textarea:focus {
   outline: none;
   border-color: var(--accent);
-  background: #fff;
+  box-shadow: 0 0 10px var(--accent-glow);
 }
 
-.btn-submit {
-  background: #000;
-  color: #fff;
-  padding: 15px 40px;
-  border: none;
-  border-radius: 12px;
-  font-weight: bold;
-  cursor: pointer;
-  width: 100%;
-}
-
-@media (max-width: 768px) {
-  .contact-wrapper {
-    grid-template-columns: 1fr;
-  }
-
-  .top-bar {
-    flex-direction: column;
-    gap: 15px;
-  }
-}
-
+/* --- FOOTER & SOCIALS --- */
 .footer {
-  display: flex;
   text-align: center;
-  justify-content: center;
-  padding: 20px;
-  color: #888;
+  padding: 40px 20px;
+  color: var(--sub-text);
   font-size: 14px;
 }
-
 .social-links {
   display: flex;
   gap: 20px;
   align-items: center;
-  margin-left: 20px;
+  margin-top: 15px;
 }
-
 .social-icon img {
   width: 30px;
-  /* Adjust size as needed */
   height: 30px;
   transition: all 0.3s ease;
-  /* Smooth transition for the glow */
-  filter: grayscale(1) opacity(0.7);
-  /* Optional: make them subtle until hover */
+  filter: grayscale(1) opacity(0.7) brightness(200%);
 }
-
-/* GitHub Glow - Electric Purple/White */
 .github:hover img {
-  filter: grayscale(0) opacity(1) drop-shadow(0 0 8px #9c07f9);
+  filter: grayscale(0) opacity(1) drop-shadow(0 0 10px #fff);
   transform: translateY(-3px);
 }
-
-/* Instagram Glow - Warm Pink/Orange */
 .insta:hover img {
-  filter: grayscale(0) opacity(1) drop-shadow(0 0 8px #f09433);
+  filter: grayscale(0) opacity(1) drop-shadow(0 0 10px #f09433);
   transform: translateY(-3px);
 }
-
-/* LinkedIn Glow - Deep Professional Blue */
 .linkedin:hover img {
   filter: grayscale(0) opacity(1) drop-shadow(0 0 10px #0077b5);
   transform: translateY(-3px);
 }
 
-[data-theme="dark"] {
-  /* Dark Mode Colors */
-  --bg-color: #0a0a0c;
-  --card-bg: #161618;
-  --text-color: #f5f5f7;
-  --border-color: rgba(255, 255, 255, 0.1);
+/* --- ANIMATIONS & MICRO-INTERACTIONS --- */
+
+/* 1. The Zero-Gravity Float */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+    box-shadow:
+      inset 0 0 20px rgba(168, 85, 247, 0.1),
+      0 12px 35px rgba(0, 0, 0, 0.6);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
 
-body {
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  transition: background-color 0.3s ease, color 0.3s ease;
-  /* Smooth transition */
+.card,
+.bento-item {
+  animation: float 8s ease-in-out infinite;
 }
 
+/* Stagger the delays so they don't all move at the exact same time */
+.card:nth-child(2n),
+.bento-item:nth-child(2n) {
+  animation-delay: 2s;
+}
+.card:nth-child(3n),
+.bento-item:nth-child(3n) {
+  animation-delay: 4s;
+}
 
+/* Pause the floating when the user hovers so it doesn't distract them */
+.card:hover,
+.bento-item:hover {
+  animation-play-state: paused;
+}
 
+/* 2. Neon Pulse for Badges */
+@keyframes neonPulse {
+  0%,
+  100% {
+    box-shadow:
+      0 0 5px var(--accent-glow),
+      inset 0 0 5px var(--accent-glow);
+  }
+  50% {
+    box-shadow:
+      0 0 20px var(--accent),
+      inset 0 0 10px var(--accent);
+  }
+}
 
+.badge {
+  animation: neonPulse 2.5s infinite alternate;
+}
 
-/* This code runs only on screens smaller than 768px (Tablets & Phones) */
+/* 3. Smooth Scale-in Scroll Reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px) scale(0.95); /* Slight shrink effect */
+  transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+}
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* --- MOBILE RESPONSIVE --- */
 @media (max-width: 768px) {
-
-  /* 1. Stack the Bento Grid */
   .bento-grid {
     grid-template-columns: 1fr;
-    /* Force everything into 1 single column */
     gap: 15px;
-    /* Slightly tighter spacing for smaller screens */
   }
-
-  /* 2. Fix the Featured Project */
-  .card[style*="grid-column: span 2"] {
+  .card[style*="grid-column: span"] {
     grid-column: span 1 !important;
-    /* Force wide cards to fit the screen */
   }
-
-  /* 3. Adjust the Hero Section */
   .intro {
     flex-direction: column-reverse;
-    /* Put text below the image */
     text-align: center;
     height: auto;
     padding-top: 50px;
   }
-
   .hero-text h1 {
     font-size: 38px;
-    /* Shrink text so it doesn't wrap awkwardly */
   }
-
   .hero-img {
     width: 100%;
-    /* Make the image container fit the phone width */
     height: 350px;
   }
-
   .pic-main {
     width: 280px;
-    /* Scale down your portrait */
   }
+  .top-bar {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .contact-wrapper {
+    grid-template-columns: 1fr;
+  }
+  .btn-group {
+    justify-content: center;
+  }
+}
 
-  /* 4. Navigation adjustment */
-  nav ul {
-    gap: 10px;
-  }
+.card,
+.bento-item {
+  animation: float 8s ease-in-out infinite;
+}
 
-  nav a {
-    font-size: 12px;
+/* Stagger the delays so they don't all move at the exact same time */
+.card:nth-child(2n),
+.bento-item:nth-child(2n) {
+  animation-delay: 2s;
+}
+.card:nth-child(3n),
+.bento-item:nth-child(3n) {
+  animation-delay: 4s;
+}
+
+/* Pause the floating when the user hovers so it doesn't distract them */
+.card:hover,
+.bento-item:hover {
+  animation-play-state: paused;
+}
+
+@keyframes neonPulse {
+  0%,
+  100% {
+    box-shadow:
+      0 0 5px var(--accent-glow),
+      inset 0 0 5px var(--accent-glow);
   }
+  50% {
+    box-shadow:
+      0 0 20px var(--accent),
+      inset 0 0 10px var(--accent);
+  }
+}
+
+.badge {
+  animation: neonPulse 2.5s infinite alternate;
 }
